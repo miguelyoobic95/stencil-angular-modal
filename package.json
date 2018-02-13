@@ -1,0 +1,11 @@
+{
+  "name": "duplicate-bug",
+  "private": false,
+  "version": "0.0.0",
+  "description": "Duplicate bug with stencil and angular",
+  "files": ["dist/"],
+  "scripts": {
+    "start": "cd stencil && npm run build && cd ../angular && ng serve --open",
+    "install": "cd stencil && npm install && cd ../angular && npm install"
+  }
+}
