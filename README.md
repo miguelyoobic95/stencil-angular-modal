@@ -4,12 +4,13 @@
 
 ## Steps to reproduce bug
 
--> Clone the repo 
+-> Clone the repo  `git clone https://github.com/sebastien-yoobic/duplicate.git`
+`cd duplicate`
 
-install deps 
-from root  `npm run install`
+Install deps 
+from root launch the command  `npm run install`
 
-launch Angular application
-from root  `npm run start`
+Launch Stencil build and serve Angular application
+from root launch the command  `npm run start`
 
 -> Click on the Show/Hide button
