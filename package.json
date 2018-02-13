@@ -5,7 +5,8 @@
   "description": "Duplicate bug with stencil and angular",
   "files": ["dist/"],
   "scripts": {
-    "start": "cd stencil && npm run build && cd ../angular && ng serve --open",
-    "install": "cd stencil && npm install && cd ../angular && npm install"
+    "start":
+      "cd my-component  && npm run build && cd ../angular && ng serve --open",
+    "install": "cd my-component && npm install && cd ../angular && npm install"
   }
 }

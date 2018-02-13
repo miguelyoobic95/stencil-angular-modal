@@ -1,0 +1,12 @@
+{
+  "namespace": "mycomponent",
+  "fsNamespace": "mycomponent",
+  "loader": "../mycomponent.js",
+  "core": "mycomponent.xbbcgu1t.js",
+  "corePolyfilled": "mycomponent.evjco65p.js",
+  "components": {
+    "my-component": {
+      "$": "prdetwps"
+    }
+  }
+}
