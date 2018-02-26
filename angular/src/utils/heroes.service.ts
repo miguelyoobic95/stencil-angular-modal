@@ -11,6 +11,7 @@ export class HeroesService {
         return Observable.of(['hero', 'hero2', 'hero3']);
     }
     getHeroes() {
+        console.log('service should be called upon injection');        
         return ['hero', 'hero2', 'hero3'];
     }
 }

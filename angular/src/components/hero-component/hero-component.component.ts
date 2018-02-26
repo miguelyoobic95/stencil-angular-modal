@@ -10,7 +10,9 @@ import { Observable } from 'rxjs/Observable';
 })
 export class HeroComponent implements OnInit {
 
-  constructor(private heroService: HeroesService) { }
+  constructor(private heroService: HeroesService) {
+    console.log('constructor hero service', this.heroService);
+   }
 
   heroes: Observable<string[]>;
   stringHeroes: string[];
@@ -18,6 +20,7 @@ export class HeroComponent implements OnInit {
   ngOnInit() {
     this.heroes = this.heroService.getObservableHeroes();
     this.stringHeroes = this.heroService.getHeroes();
+    console.log('service', this.heroService);
   }
 
 }

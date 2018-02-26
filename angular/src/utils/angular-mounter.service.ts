@@ -1,4 +1,5 @@
-import { Injectable, InjectionToken, ComponentFactoryResolver, ApplicationRef, Injector, EmbeddedViewRef } from '@angular/core';
+import { Injectable, InjectionToken, ComponentFactoryResolver, ApplicationRef, Injector, 
+  EmbeddedViewRef, ReflectiveInjector } from '@angular/core';
 import { HeroesService } from './heroes.service';
 import { inject } from '@angular/core/testing';
 
@@ -33,7 +34,8 @@ export class AngularMounterService {
     const factory = this.cfr.resolveComponentFactory(component);
     const providers = {provide: this.HeroesServiceToken, useClass: HeroesService, deps: []};
 
-    const injector = Injector.create([providers]);
+    // const injector = Injector.create([providers]);
+    const injector = ReflectiveInjector.resolveAndCreate([providers]);
     console.log('injector', injector);
     const componentToInject = factory.create(injector, []);
 
