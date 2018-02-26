@@ -6,11 +6,15 @@ import { AngularComponent } from '../components/angular-component/angular-compon
 
 import '../assets/build/mycomponent';
 import { ModalContentComponent } from '../components/modal-content/modal-content.component';
+import { AngularMounterService } from '../utils/angular-mounter.service';
+import { HeroComponent } from '../components/hero-component/hero-component.component';
+import { HeroesService } from '../utils/heroes.service';
 
 @NgModule({
-  declarations: [AppComponent, AngularComponent, ModalContentComponent],
+  declarations: [AppComponent, AngularComponent, ModalContentComponent, HeroComponent],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  entryComponents: [ModalContentComponent, HeroComponent],
+  providers: [AngularMounterService, HeroesService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

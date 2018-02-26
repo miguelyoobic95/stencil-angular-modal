@@ -1,0 +1,6 @@
+<div>
+  <p *ngFor="let hero of heroes | async">{{hero}}</p>
+  <p *ngFor="let hero of stringHeroes">{{hero}}</p>
+  
+  <p> this does not depend on the service</p>
+</div>
