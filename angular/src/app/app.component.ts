@@ -15,7 +15,7 @@ import { ModalContentComponent } from '../components/modal-content/modal-content
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   visible: boolean = true;
 
   @ViewChild('parent', { read: ViewContainerRef })
@@ -46,14 +46,5 @@ export class AppComponent implements OnInit {
   }
   onClick() {
     this.visible = !this.visible;
-  }
-
-  ngOnInit() {
-    this.modalCtrl = document.querySelector('yoo-modal-controller');
-  }
-
-  openModal() {
-    this.modalCtrl.generateModal(this.modalProps);
-    this.modalCtrl.show();
   }
 }
