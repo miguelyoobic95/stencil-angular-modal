@@ -2,11 +2,20 @@
   "namespace": "mycomponent",
   "fsNamespace": "mycomponent",
   "loader": "../mycomponent.js",
-  "core": "mycomponent.xbbcgu1t.js",
-  "corePolyfilled": "mycomponent.evjco65p.js",
+  "core": "mycomponent.uviml6b2.js",
+  "corePolyfilled": "mycomponent.znlwjvqq.js",
   "components": {
     "my-component": {
       "$": "prdetwps"
+    },
+    "yoo-button": {
+      "$": "4koyfv7q"
+    },
+    "yoo-modal": {
+      "$": "4koyfv7q"
+    },
+    "yoo-modal-controller": {
+      "$": "4koyfv7q"
     }
   }
 }

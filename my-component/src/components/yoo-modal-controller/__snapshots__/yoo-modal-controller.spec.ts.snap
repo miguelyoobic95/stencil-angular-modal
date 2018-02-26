@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooModalControllerComponent Single modal controller should create a single modal with header and footer 1`] = `
+<div>
+  <yoo-modal-controller
+    class="hydrated"
+    data-yoo-modal-controller-host=""
+  >
+    <!---->
+    <div
+      class=""
+      data-yoo-modal-controller=""
+    />
+  </yoo-modal-controller>
+</div>
+`;

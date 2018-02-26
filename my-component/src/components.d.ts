@@ -44,4 +44,105 @@ declare global {
   }
 }
 
+
+import {
+  YooButtonComponent as YooButton
+} from './components/yoo-button/yoo-button';
+
+declare global {
+  interface HTMLYooButtonElement extends YooButton, HTMLStencilElement {
+  }
+  var HTMLYooButtonElement: {
+    prototype: HTMLYooButtonElement;
+    new (): HTMLYooButtonElement;
+  };
+  interface HTMLElementTagNameMap {
+    "yoo-button": HTMLYooButtonElement;
+  }
+  interface ElementTagNameMap {
+    "yoo-button": HTMLYooButtonElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "yoo-button": JSXElements.YooButtonAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface YooButtonAttributes extends HTMLAttributes {
+      disabled?: boolean;
+      icon?: string;
+      isLoading?: boolean;
+      title?: string;
+    }
+  }
+}
+
+
+import {
+  YooModalControllerComponent as YooModalController
+} from './components/yoo-modal-controller/yoo-modal-controller';
+
+declare global {
+  interface HTMLYooModalControllerElement extends YooModalController, HTMLStencilElement {
+  }
+  var HTMLYooModalControllerElement: {
+    prototype: HTMLYooModalControllerElement;
+    new (): HTMLYooModalControllerElement;
+  };
+  interface HTMLElementTagNameMap {
+    "yoo-modal-controller": HTMLYooModalControllerElement;
+  }
+  interface ElementTagNameMap {
+    "yoo-modal-controller": HTMLYooModalControllerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "yoo-modal-controller": JSXElements.YooModalControllerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface YooModalControllerAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  YooModalComponent as YooModal
+} from './components/yoo-modal/yoo-modal';
+
+declare global {
+  interface HTMLYooModalElement extends YooModal, HTMLStencilElement {
+  }
+  var HTMLYooModalElement: {
+    prototype: HTMLYooModalElement;
+    new (): HTMLYooModalElement;
+  };
+  interface HTMLElementTagNameMap {
+    "yoo-modal": HTMLYooModalElement;
+  }
+  interface ElementTagNameMap {
+    "yoo-modal": HTMLYooModalElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "yoo-modal": JSXElements.YooModalAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface YooModalAttributes extends HTMLAttributes {
+      content?: HTMLElement;
+      cssClass?: string;
+      footerText?: string;
+      hasFooter?: boolean;
+      hasHeader?: boolean;
+      primaryButtonText?: string;
+      secondaryButtonText?: string;
+      title?: string;
+      titleIcon?: string;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
