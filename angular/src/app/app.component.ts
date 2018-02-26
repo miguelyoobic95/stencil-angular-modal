@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+  ComponentFactoryResolver,
+  Injector,
+  EmbeddedViewRef,
+  ApplicationRef
+} from '@angular/core';
 import { ModalContentComponent } from '../components/modal-content/modal-content.component';
 
 @Component({
@@ -9,8 +18,32 @@ import { ModalContentComponent } from '../components/modal-content/modal-content
 export class AppComponent implements OnInit {
   visible: boolean = true;
 
-  modalProps = { title: 'Hello', content: new ModalContentComponent(), hasFooter: true };
+  @ViewChild('parent', { read: ViewContainerRef })
+  parent: ViewContainerRef;
+
+  modalProps;
   modalCtrl;
+  constructor(
+    private r: ComponentFactoryResolver,
+    private injector: Injector,
+    private appRef: ApplicationRef
+  ) {
+    const factory = this.r.resolveComponentFactory(ModalContentComponent);
+    const component = factory.create(this.injector);
+
+    this.appRef.attachView(component.hostView);
+
+    const domElem = (factory.create(this.injector).hostView as EmbeddedViewRef<
+      any
+    >).rootNodes[0] as HTMLElement;
+
+    console.log('Dom Elem', domElem);
+    this.modalProps = {
+      title: 'Hello',
+      content: domElem,
+      hasFooter: true
+    };
+  }
   onClick() {
     this.visible = !this.visible;
   }

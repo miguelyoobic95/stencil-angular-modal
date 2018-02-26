@@ -11,6 +11,7 @@ import { ModalContentComponent } from '../components/modal-content/modal-content
   declarations: [AppComponent, AngularComponent, ModalContentComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
+  entryComponents: [ModalContentComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

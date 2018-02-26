@@ -1,0 +1,33 @@
+{
+  "hosting": {
+    "rules": [
+      {
+        "include": "/",
+        "headers": [
+          {
+            "name": "Link",
+            "value": "</angular/src/assets/build/mycomponent/mycomponent.14ba1eox.js>;rel=preload;as=script"
+          }
+        ]
+      },
+      {
+        "include": "/angular/src/assets/build/mycomponent/**",
+        "headers": [
+          {
+            "name": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      },
+      {
+        "include": "/sw.js",
+        "headers": [
+          {
+            "name": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
+}

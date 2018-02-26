@@ -2,20 +2,20 @@
   "namespace": "mycomponent",
   "fsNamespace": "mycomponent",
   "loader": "../mycomponent.js",
-  "core": "mycomponent.uviml6b2.js",
-  "corePolyfilled": "mycomponent.znlwjvqq.js",
+  "core": "mycomponent.14ba1eox.js",
+  "corePolyfilled": "mycomponent.h3nfdf5n.js",
   "components": {
     "my-component": {
-      "$": "prdetwps"
+      "$": "jkpfev1j"
     },
     "yoo-button": {
-      "$": "4koyfv7q"
+      "$": "9v5fzmi3"
     },
     "yoo-modal": {
-      "$": "4koyfv7q"
+      "$": "wbbcgnfd"
     },
     "yoo-modal-controller": {
-      "$": "4koyfv7q"
+      "$": "wbbcgnfd"
     }
   }
 }

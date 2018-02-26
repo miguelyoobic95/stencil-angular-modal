@@ -3,10 +3,14 @@
   "private": false,
   "version": "0.0.0",
   "description": "Duplicate bug with stencil and angular",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "start":
-      "cd my-component  && npm run build && cd ../angular && ng serve --open",
+    "start": "cd my-component  && npm run build && cd ../angular && ng serve --open",
     "install": "cd my-component && npm install && cd ../angular && npm install"
+  },
+  "dependencies": {
+    "@stencil/sass": "0.0.3"
   }
 }
