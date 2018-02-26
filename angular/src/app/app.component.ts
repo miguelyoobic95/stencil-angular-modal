@@ -19,7 +19,8 @@ import { AngularMounterService } from '../utils/angular-mounter.service';
 })
 export class AppComponent implements OnInit {
 
-  modalProps;
+  modalProps1;
+  modalProps2;
   visible: boolean = true;
 
   constructor(
@@ -28,21 +29,19 @@ export class AppComponent implements OnInit {
     private appRef: ApplicationRef,
     private mounter: AngularMounterService
   ) {
-    // const factory = this.r.resolveComponentFactory(ModalContentComponent);
-    // const component = factory.create(this.injector);
 
-    // this.appRef.attachView(component.hostView);
-
-    // const domElem = (factory.create(this.injector).hostView as EmbeddedViewRef<
-    //   any
-    // >).rootNodes[0] as HTMLElement;
-    // const domElem = this.mounter.transformToHTMLAlt(ModalContentComponent);
-    const domElem = this.mounter.mountWithProviders(HeroComponent);
+    const domElem1 = this.mounter.transformToHTMLAlt(ModalContentComponent);
+    const domElem2 = this.mounter.mountWithProviders(HeroComponent);
     
-    console.log('Dom Elem', domElem);
-    this.modalProps = {
+    this.modalProps1 = {
       title: 'Hello',
-      content: domElem,
+      content: domElem1,
+      hasFooter: true
+    };
+
+    this.modalProps2 = {
+      title: 'Hello',
+      content: domElem2,
       hasFooter: true
     };
   }
@@ -56,8 +55,13 @@ export class AppComponent implements OnInit {
     this.modalCtrl = document.querySelector('yoo-modal-controller');
   }
 
-  openModal() {
-    this.modalCtrl.generateModal(this.modalProps);
+  openModal1() {
+    this.modalCtrl.generateModal(this.modalProps1);
+    this.modalCtrl.show();
+  }
+
+  openModal2() {
+    this.modalCtrl.generateModal(this.modalProps2);
     this.modalCtrl.show();
   }
 }

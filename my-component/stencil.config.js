@@ -1,7 +1,12 @@
 exports.config = {
   namespace: 'mycomponent',
-  bundles: [{ components: ['my-component'] }],
-  buildDir: '../../angular/src/assets/build'
+  sassConfig: {
+    includePaths: ['src/styles/']
+  },
+  buildDir: '../../angular/src/assets/build',
+  plugins: [
+    sass()
+  ]
 };
 
 exports.devServer = {
